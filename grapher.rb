@@ -53,9 +53,10 @@ MASK = PATTERN.split(//).map{|c| c == 'X'}
 
 DAYSTART = Date.new(2019,05,19)
 raise unless DAYSTART.wday == 0 # gotta be sunday
-DAYEND   = DAYSTART + (PATTERN.size*5)
-
-
+DAYEND   = DAYSTART + (PATTERN.size*13)
+puts DAYEND
+# uncomment the "return" if u want to check the end date.
+#return
 # def test_pattern
 #   (0..6).map{|n| (PATTERN.split(//)*3).each_with_index{|c,i| print c if i%7==n}; print "\n"}
 # end
@@ -70,7 +71,7 @@ end
 commit_dates = []
 dates.each do |date|
   if on?(date)
-    22.times{|i| commit_dates << date.to_time + i*3600}
+    19.times{|i| commit_dates << date.to_time + i*3600}
   end
 end
 
