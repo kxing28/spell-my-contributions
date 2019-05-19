@@ -53,7 +53,7 @@ MASK = PATTERN.split(//).map{|c| c == 'X'}
 
 DAYSTART = Date.new(2019,05,19)
 raise unless DAYSTART.wday == 0 # gotta be sunday
-DAYEND   = DAYSTART + (PATTERN.size*5)
+DAYEND   = DAYSTART + (PATTERN.size*6)
 
 
 # def test_pattern
